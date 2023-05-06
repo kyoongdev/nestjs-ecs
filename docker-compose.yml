@@ -1,0 +1,11 @@
+version: '1'
+services:
+  nestjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nestjs-app
+    container_name: nestjs-app
+    ports:
+      - 8000:8000
+    command: yarn run start
